@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapeo de Campos | DoqFlow</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         APP MAPEO
+    ========================================= -->
+    <div class="app-layout">
+
+        <!-- ========================================
+             SIDEBAR
+        ========================================= -->
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <h2>DoqFlow</h2>
+                <p>Panel de control</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">📊 Dashboard</a>
+                <a href="mapeo.html" class="sidebar-link active">🧩 Mapeo de Campos</a>
+                <a href="monitor.html" class="sidebar-link">⚙️ Monitor</a>
+                <a href="#" class="sidebar-link">📄 Plantillas</a>
+                <a href="#" class="sidebar-link">📈 Reportes</a>
+                <a href="index.html" class="sidebar-link">🏠 Landing</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>DoqFlow v1.0</p>
+            </div>
+
+        </aside>
+
+        <!-- ========================================
+             MAIN CONTENT
+        ========================================= -->
+        <main class="dashboard-main">
+
+            <!-- HEADER -->
+            <header class="dashboard-topbar">
+                <div class="topbar-left">
+                    <h1>Mapeo de Campos</h1>
+                    <p>
+                        Relaciona las columnas del archivo Excel con los campos dinámicos de las plantillas para automatizar la generación documental.
+                    </p>
+                </div>
+
+                <div class="topbar-right">
+                    <button class="btn btn-primary">Guardar mapeo</button>
+                </div>
+            </header>
+
+            <!-- KPI / RESUMEN -->
+            <section class="dashboard-section">
+                <div class="stats-grid">
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">📥</div>
+                        <h3>24</h3>
+                        <p>Columnas Detectadas</p>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">🧩</div>
+                        <h3>18</h3>
+                        <p>Campos de Plantilla</p>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">🔗</div>
+                        <h3>16</h3>
+                        <p>Mapeos Completados</p>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">⚠️</div>
+                        <h3>2</h3>
+                        <p>Campos Pendientes</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- GRID PRINCIPAL DEL MAPEO -->
+            <section class="dashboard-section mapping-grid">
+
+                <!-- PANEL IZQUIERDO -->
+                <div class="mapping-left">
+
+                    <!-- COLUMNAS DEL EXCEL -->
+                    <div class="card mapping-card">
+                        <div class="panel-header">
+                            <h2>Columnas del Excel</h2>
+                            <span>Origen de datos</span>
+                        </div>
+
+                        <div class="field-list">
+
+                            <div class="field-item">
+                                <div class="field-main">
+                                    <h4>nombre_completo</h4>
+                                    <p>Texto · Columna A</p>
+                                </div>
+                                <span class="field-badge linked">Vinculado</span>
+                            </div>
+
+                            <div class="field-item">
+                                <div class="field-main">
+                                    <h4>documento_id</h4>
+                                    <p>Número · Columna B</p>
+                                </div>
+                                <span class="field-badge linked">Vinculado</span>
+                            </div>
+
+                            <div class="field-item">
+                                <div class="field-main">
+                                    <h4>cargo</h4>
+                                    <p>Texto · Columna C</p>
+                                </div>
+                                <span class="field-badge linked">Vinculado</span>
+                            </div>
+
+                            <div class="field-item">
+                                <div class="field-main">
+                                    <h4>salario</h4>
+                                    <p>Moneda · Columna D</p>
+                                </div>
+                                <span class="field-badge linked">Vinculado</span>
+                            </div>
+
+                            <div class="field-item">
+                                <div class="field-main">
+                                    <h4>fecha_ingreso</h4>
+                                    <p>Fecha · Columna E</p>
+                                </div>
+                                <span class="field-badge linked">Vinculado</span>
+                            </div>
+
+                            <div class="field-item">
+                                <div class="field-main">
+                                    <h4>ciudad</h4>
+                                    <p>Texto · Columna F</p>
+                                </div>
+                                <span class="field-badge pending">Pendiente</span>
+                            </div>
+
+                            <div class="field-item">
+                                <div class="field-main">
+                                    <h4>telefono</h4>
+                                    <p>Texto · Columna G</p>
+                                </div>
+                                <span class="field-badge pending">Pendiente</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- REGLAS / VALIDACIONES -->
+                    <div class="card mapping-card">
+                        <div class="panel-header">
+                            <h2>Validaciones del mapeo</h2>
+                            <span>Reglas activas</span>
+                        </div>
+
+                        <div class="validation-list">
+
+                            <div class="validation-item">
+                                <span class="validation-icon success">✓</span>
+                                <div>
+                                    <h4>Campos obligatorios detectados</h4>
+                                    <p>Los identificadores principales ya fueron vinculados.</p>
+                                </div>
+                            </div>
+
+                            <div class="validation-item">
+                                <span class="validation-icon success">✓</span>
+                                <div>
+                                    <h4>Formato de fecha reconocido</h4>
+                                    <p>La columna <strong>fecha_ingreso</strong> tiene un formato válido.</p>
+                                </div>
+                            </div>
+
+                            <div class="validation-item">
+                                <span class="validation-icon warning">!</span>
+                                <div>
+                                    <h4>Campos sin asignar</h4>
+                                    <p>Existen columnas que todavía no tienen relación con la plantilla.</p>
+                                </div>
+                            </div>
+
+                            <div class="validation-item">
+                                <span class="validation-icon warning">!</span>
+                                <div>
+                                    <h4>Revisión de consistencia</h4>
+                                    <p>Se recomienda validar manualmente los campos de contacto.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PANEL CENTRAL -->
+                <div class="mapping-center">
+
+                    <!-- FLUJO VISUAL DE MAPEO -->
+                    <div class="card mapping-card mapping-flow-card">
+                        <div class="panel-header">
+                            <h2>Relación de campos</h2>
+                            <span>Vinculación visual</span>
+                        </div>
+
+                        <div class="mapping-flow">
+
+                            <div class="mapping-row">
+                                <div class="mapping-source">
+                                    <span class="mapping-tag excel">nombre_completo</span>
+                                </div>
+                                <div class="mapping-arrow">→</div>
+                                <div class="mapping-target">
+                                    <span class="mapping-tag template">{{nombre_cliente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="mapping-row">
+                                <div class="mapping-source">
+                                    <span class="mapping-tag excel">documento_id</span>
+                                </div>
+                                <div class="mapping-arrow">→</div>
+                                <div class="mapping-target">
+                                    <span class="mapping-tag template">{{identificacion}}</span>
+                                </div>
+                            </div>
+
+                            <div class="mapping-row">
+                                <div class="mapping-source">
+                                    <span class="mapping-tag excel">cargo</span>
+                                </div>
+                                <div class="mapping-arrow">→</div>
+                                <div class="mapping-target">
+                                    <span class="mapping-tag template">{{cargo_empleado}}</span>
+                                </div>
+                            </div>
+
+                            <div class="mapping-row">
+                                <div class="mapping-source">
+                                    <span class="mapping-tag excel">salario</span>
+                                </div>
+                                <div class="mapping-arrow">→</div>
+                                <div class="mapping-target">
+                                    <span class="mapping-tag template">{{salario_base}}</span>
+                                </div>
+                            </div>
+
+                            <div class="mapping-row">
+                                <div class="mapping-source">
+                                    <span class="mapping-tag excel">fecha_ingreso</span>
+                                </div>
+                                <div class="mapping-arrow">→</div>
+                                <div class="mapping-target">
+                                    <span class="mapping-tag template">{{fecha_inicio}}</span>
+                                </div>
+                            </div>
+
+                            <div class="mapping-row pending-row">
+                                <div class="mapping-source">
+                                    <span class="mapping-tag excel pending-tag">ciudad</span>
+                                </div>
+                                <div class="mapping-arrow">→</div>
+                                <div class="mapping-target">
+                                    <span class="mapping-tag template pending-tag">Sin asignar</span>
+                                </div>
+                            </div>
+
+                            <div class="mapping-row pending-row">
+                                <div class="mapping-source">
+                                    <span class="mapping-tag excel pending-tag">telefono</span>
+                                </div>
+                                <div class="mapping-arrow">→</div>
+                                <div class="mapping-target">
+                                    <span class="mapping-tag template pending-tag">Sin asignar</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- TABLA DE MAPEO -->
+                    <div class="card mapping-card">
+                        <div class="panel-header">
+                            <h2>Tabla de correspondencias</h2>
+                            <span>Detalle del vínculo</span>
+                        </div>
+
+                        <table class="process-table mapping-table">
+                            <thead>
+                                <tr>
+                                    <th>Campo Excel</th>
+                                    <th>Campo Plantilla</th>
+                                    <th>Tipo</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>nombre_completo</td>
+                                    <td>{{nombre_cliente}}</td>
+                                    <td>Texto</td>
+                                    <td><span class="status completed">Asignado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>documento_id</td>
+                                    <td>{{identificacion}}</td>
+                                    <td>Número</td>
+                                    <td><span class="status completed">Asignado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>cargo</td>
+                                    <td>{{cargo_empleado}}</td>
+                                    <td>Texto</td>
+                                    <td><span class="status completed">Asignado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>salario</td>
+                                    <td>{{salario_base}}</td>
+                                    <td>Moneda</td>
+                                    <td><span class="status completed">Asignado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>fecha_ingreso</td>
+                                    <td>{{fecha_inicio}}</td>
+                                    <td>Fecha</td>
+                                    <td><span class="status completed">Asignado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ciudad</td>
+                                    <td>—</td>
+                                    <td>Texto</td>
+                                    <td><span class="status processing">Pendiente</span></td>
+                                </tr>
+                                <tr>
+                                    <td>telefono</td>
+                                    <td>—</td>
+                                    <td>Texto</td>
+                                    <td><span class="status processing">Pendiente</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- PANEL DERECHO -->
+                <div class="mapping-right">
+
+                    <!-- RESUMEN DEL PROCESO -->
+                    <div class="card side-card">
+                        <div class="panel-header panel-header-small">
+                            <h2>Resumen del mapeo</h2>
+                        </div>
+
+                        <div class="summary-list">
+
+                            <div class="summary-item">
+                                <h4>Plantilla seleccionada</h4>
+                                <p>Contrato Laboral Base</p>
+                            </div>
+
+                            <div class="summary-item">
+                                <h4>Archivo de entrada</h4>
+                                <p>contratos_empleados.xlsx</p>
+                            </div>
+
+                            <div class="summary-item">
+                                <h4>Estado general</h4>
+                                <p>Mapeo parcialmente completo</p>
+                            </div>
+
+                            <div class="summary-item">
+                                <h4>Campos faltantes</h4>
+                                <p>2 columnas sin relación definida</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- PROGRESO -->
+                    <div class="card side-card">
+                        <div class="panel-header panel-header-small">
+                            <h2>Progreso</h2>
+                        </div>
+
+                        <div class="mapping-progress">
+                            <div class="mapping-progress-header">
+                                <span>Avance de asignación</span>
+                                <strong>89%</strong>
+                            </div>
+
+                            <div class="progress-bar progress-bar-large">
+                                <div class="progress-fill" style="width: 89%;"></div>
+                            </div>
+
+                            <p class="mapping-progress-text">
+                                16 de 18 campos de la plantilla ya tienen una fuente de datos definida.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ACCIONES -->
+                    <div class="card side-card">
+                        <div class="panel-header panel-header-small">
+                            <h2>Acciones rápidas</h2>
+                        </div>
+
+                        <div class="quick-actions-vertical">
+                            <button class="btn btn-primary">Guardar configuración</button>
+                            <button class="btn btn-secondary">Validar campos</button>
+                            <button class="btn btn-secondary">Vista previa</button>
+                            <button class="btn btn-secondary">Exportar mapeo</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

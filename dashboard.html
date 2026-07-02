@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | DoqFlow</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         APP DASHBOARD V2
+    ========================================= -->
+    <div class="app-layout">
+
+        <!-- ========================================
+             SIDEBAR
+        ========================================= -->
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <h2>DoqFlow</h2>
+                <p>Panel de control</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active">📊 Dashboard</a>
+                <a href="mapeo.html" class="sidebar-link">🧩 Mapeo de Campos</a>
+                <a href="monitor.html" class="sidebar-link">⚙️ Monitor</a>
+                <a href="#" class="sidebar-link">📄 Plantillas</a>
+                <a href="#" class="sidebar-link">📈 Reportes</a>
+                <a href="index.html" class="sidebar-link">🏠 Landing</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>DoqFlow v1.0</p>
+            </div>
+
+        </aside>
+
+        <!-- ========================================
+             MAIN CONTENT
+        ========================================= -->
+        <main class="dashboard-main">
+
+            <!-- HEADER SUPERIOR -->
+            <header class="dashboard-topbar">
+
+                <div class="topbar-left">
+                    <h1>Dashboard</h1>
+                    <p>Resumen general del sistema de automatización documental.</p>
+                </div>
+
+                <div class="topbar-right">
+                    <button class="btn btn-primary">Nuevo proceso</button>
+                </div>
+
+            </header>
+
+            <!-- KPI CARDS -->
+            <section class="dashboard-section">
+
+                <div class="stats-grid">
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">📄</div>
+                        <h3>1,245</h3>
+                        <p>Documentos Generados</p>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <h3>328</h3>
+                        <p>Procesados Hoy</p>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">🧩</div>
+                        <h3>12</h3>
+                        <p>Plantillas Activas</p>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">📈</div>
+                        <h3>98%</h3>
+                        <p>Tasa de Éxito</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- GRID CENTRAL -->
+            <section class="dashboard-section dashboard-grid">
+
+                <!-- PROCESOS RECIENTES -->
+                <div class="dashboard-panel panel-large">
+
+                    <div class="panel-header">
+                        <h2>Procesos Recientes</h2>
+                        <span>Última actividad</span>
+                    </div>
+
+                    <div class="card table-card">
+
+                        <table class="process-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Archivo</th>
+                                    <th>Plantilla</th>
+                                    <th>Estado</th>
+                                    <th>Documentos</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Contratos.xlsx</td>
+                                    <td>Contrato Laboral</td>
+                                    <td><span class="status completed">Completado</span></td>
+                                    <td>250</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Certificados.xlsx</td>
+                                    <td>Certificado Académico</td>
+                                    <td><span class="status processing">Procesando</span></td>
+                                    <td>120</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Facturas_Mayo.xlsx</td>
+                                    <td>Factura Comercial</td>
+                                    <td><span class="status completed">Completado</span></td>
+                                    <td>480</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Actas_Internas.xlsx</td>
+                                    <td>Acta de Reunión</td>
+                                    <td><span class="status completed">Completado</span></td>
+                                    <td>95</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Reportes_Q2.xlsx</td>
+                                    <td>Reporte Ejecutivo</td>
+                                    <td><span class="status error">Error</span></td>
+                                    <td>60</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- PANEL DERECHO -->
+                <div class="dashboard-panel panel-side">
+
+                    <!-- RESUMEN DEL SISTEMA -->
+                    <div class="card side-card">
+
+                        <div class="panel-header panel-header-small">
+                            <h2>Estado del sistema</h2>
+                        </div>
+
+                        <div class="system-status">
+
+                            <div class="status-item">
+                                <span class="status-dot status-green"></span>
+                                <div>
+                                    <h4>Motor de generación</h4>
+                                    <p>Operativo</p>
+                                </div>
+                            </div>
+
+                            <div class="status-item">
+                                <span class="status-dot status-blue"></span>
+                                <div>
+                                    <h4>Cola de procesamiento</h4>
+                                    <p>12 tareas activas</p>
+                                </div>
+                            </div>
+
+                            <div class="status-item">
+                                <span class="status-dot status-red"></span>
+                                <div>
+                                    <h4>Errores recientes</h4>
+                                    <p>2 incidencias detectadas</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ACCIONES RÁPIDAS -->
+                    <div class="card side-card">
+
+                        <div class="panel-header panel-header-small">
+                            <h2>Acciones rápidas</h2>
+                        </div>
+
+                        <div class="quick-actions-vertical">
+                            <button class="btn btn-primary">Subir Excel</button>
+                            <button class="btn btn-secondary">Nueva Plantilla</button>
+                            <button class="btn btn-secondary">Ver Monitor</button>
+                            <button class="btn btn-secondary">Generar Reporte</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ACTIVIDAD / RESUMEN INFERIOR -->
+            <section class="dashboard-section dashboard-bottom-grid">
+
+                <div class="card activity-card">
+                    <div class="panel-header">
+                        <h2>Actividad semanal</h2>
+                        <span>Últimos 7 días</span>
+                    </div>
+
+                    <div class="activity-bars">
+
+                        <div class="activity-row">
+                            <span>Lunes</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 72%;"></div>
+                            </div>
+                            <strong>180</strong>
+                        </div>
+
+                        <div class="activity-row">
+                            <span>Martes</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 88%;"></div>
+                            </div>
+                            <strong>220</strong>
+                        </div>
+
+                        <div class="activity-row">
+                            <span>Miércoles</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 64%;"></div>
+                            </div>
+                            <strong>160</strong>
+                        </div>
+
+                        <div class="activity-row">
+                            <span>Jueves</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 92%;"></div>
+                            </div>
+                            <strong>230</strong>
+                        </div>
+
+                        <div class="activity-row">
+                            <span>Viernes</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 80%;"></div>
+                            </div>
+                            <strong>200</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card activity-card">
+                    <div class="panel-header">
+                        <h2>Resumen operativo</h2>
+                        <span>Hoy</span>
+                    </div>
+
+                    <div class="summary-list">
+
+                        <div class="summary-item">
+                            <h4>Plantilla más usada</h4>
+                            <p>Contrato Laboral</p>
+                        </div>
+
+                        <div class="summary-item">
+                            <h4>Tiempo promedio por lote</h4>
+                            <p>3 min 42 s</p>
+                        </div>
+
+                        <div class="summary-item">
+                            <h4>Usuario con más actividad</h4>
+                            <p>Equipo de RR. HH.</p>
+                        </div>
+
+                        <div class="summary-item">
+                            <h4>Formato más exportado</h4>
+                            <p>PDF</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

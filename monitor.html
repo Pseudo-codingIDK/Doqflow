@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor | DoqFlow</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         APP MONITOR
+    ========================================= -->
+    <div class="app-layout">
+
+        <!-- ========================================
+             SIDEBAR
+        ========================================= -->
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <h2>DoqFlow</h2>
+                <p>Panel de control</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">📊 Dashboard</a>
+                <a href="mapeo.html" class="sidebar-link">🧩 Mapeo de Campos</a>
+                <a href="monitor.html" class="sidebar-link active">⚙️ Monitor</a>
+                <a href="#" class="sidebar-link">📄 Plantillas</a>
+                <a href="#" class="sidebar-link">📈 Reportes</a>
+                <a href="index.html" class="sidebar-link">🏠 Landing</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>DoqFlow v1.0</p>
+            </div>
+
+        </aside>
+
+        <!-- ========================================
+             MAIN CONTENT
+        ========================================= -->
+        <main class="dashboard-main">
+
+            <!-- HEADER -->
+            <header class="dashboard-topbar">
+                <div class="topbar-left">
+                    <h1>Monitor de Procesos</h1>
+                    <p>Supervisa en tiempo real el estado de generación, cola de trabajo y rendimiento del sistema.</p>
+                </div>
+
+                <div class="topbar-right">
+                    <button class="btn btn-primary">Actualizar estado</button>
+                </div>
+            </header>
+
+            <!-- KPI PRINCIPALES -->
+            <section class="dashboard-section">
+                <div class="stats-grid">
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">🟢</div>
+                        <h3>18</h3>
+                        <p>Procesos Activos</p>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">⏳</div>
+                        <h3>42</h3>
+                        <p>En Cola</p>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">📄</div>
+                        <h3>3,820</h3>
+                        <p>Docs Procesados Hoy</p>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="stat-icon">⚠️</div>
+                        <h3>3</h3>
+                        <p>Incidencias</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- GRID PRINCIPAL DEL MONITOR -->
+            <section class="dashboard-section monitor-grid">
+
+                <!-- PANEL IZQUIERDO -->
+                <div class="monitor-left">
+
+                    <!-- PROCESOS ACTIVOS -->
+                    <div class="card monitor-card">
+                        <div class="panel-header">
+                            <h2>Procesos Activos</h2>
+                            <span>Tiempo real</span>
+                        </div>
+
+                        <div class="process-list">
+
+                            <div class="process-item">
+                                <div class="process-info">
+                                    <h4>Lote Contratos - RRHH</h4>
+                                    <p>Contrato Laboral · 350 documentos</p>
+                                </div>
+                                <div class="process-meta">
+                                    <span class="status processing">Procesando</span>
+                                    <strong>78%</strong>
+                                </div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%;"></div>
+                            </div>
+
+                            <div class="process-item">
+                                <div class="process-info">
+                                    <h4>Facturación Junio</h4>
+                                    <p>Factura Comercial · 620 documentos</p>
+                                </div>
+                                <div class="process-meta">
+                                    <span class="status processing">Procesando</span>
+                                    <strong>54%</strong>
+                                </div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 54%;"></div>
+                            </div>
+
+                            <div class="process-item">
+                                <div class="process-info">
+                                    <h4>Certificados Académicos</h4>
+                                    <p>Certificado · 180 documentos</p>
+                                </div>
+                                <div class="process-meta">
+                                    <span class="status processing">Procesando</span>
+                                    <strong>91%</strong>
+                                </div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 91%;"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- HISTORIAL RECIENTE -->
+                    <div class="card monitor-card">
+                        <div class="panel-header">
+                            <h2>Historial Reciente</h2>
+                            <span>Últimos eventos</span>
+                        </div>
+
+                        <table class="process-table monitor-table">
+                            <thead>
+                                <tr>
+                                    <th>Hora</th>
+                                    <th>Proceso</th>
+                                    <th>Evento</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10:42 AM</td>
+                                    <td>Lote Contratos</td>
+                                    <td>Se procesaron 50 documentos</td>
+                                    <td><span class="status completed">OK</span></td>
+                                </tr>
+                                <tr>
+                                    <td>10:38 AM</td>
+                                    <td>Facturación Junio</td>
+                                    <td>Se detectó validación incompleta</td>
+                                    <td><span class="status error">Alerta</span></td>
+                                </tr>
+                                <tr>
+                                    <td>10:30 AM</td>
+                                    <td>Certificados</td>
+                                    <td>Inicio de exportación a PDF</td>
+                                    <td><span class="status processing">En curso</span></td>
+                                </tr>
+                                <tr>
+                                    <td>10:21 AM</td>
+                                    <td>Reportes Q2</td>
+                                    <td>Proceso finalizado</td>
+                                    <td><span class="status completed">OK</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- PANEL DERECHO -->
+                <div class="monitor-right">
+
+                    <!-- ESTADO GENERAL -->
+                    <div class="card side-card">
+                        <div class="panel-header panel-header-small">
+                            <h2>Estado general</h2>
+                        </div>
+
+                        <div class="system-status">
+                            <div class="status-item">
+                                <span class="status-dot status-green"></span>
+                                <div>
+                                    <h4>Servidor principal</h4>
+                                    <p>Operativo</p>
+                                </div>
+                            </div>
+
+                            <div class="status-item">
+                                <span class="status-dot status-blue"></span>
+                                <div>
+                                    <h4>Motor de plantillas</h4>
+                                    <p>Procesando lotes activos</p>
+                                </div>
+                            </div>
+
+                            <div class="status-item">
+                                <span class="status-dot status-red"></span>
+                                <div>
+                                    <h4>Alertas pendientes</h4>
+                                    <p>3 incidencias por revisar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COLA DE TRABAJO -->
+                    <div class="card side-card">
+                        <div class="panel-header panel-header-small">
+                            <h2>Cola de trabajo</h2>
+                        </div>
+
+                        <div class="queue-list">
+                            <div class="queue-item">
+                                <span>Contratos Proveedores</span>
+                                <strong>12 lotes</strong>
+                            </div>
+                            <div class="queue-item">
+                                <span>Facturas Regional Norte</span>
+                                <strong>8 lotes</strong>
+                            </div>
+                            <div class="queue-item">
+                                <span>Actas Administrativas</span>
+                                <strong>5 lotes</strong>
+                            </div>
+                            <div class="queue-item">
+                                <span>Certificados Internos</span>
+                                <strong>17 lotes</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RESUMEN DE RENDIMIENTO -->
+                    <div class="card side-card">
+                        <div class="panel-header panel-header-small">
+                            <h2>Rendimiento</h2>
+                        </div>
+
+                        <div class="performance-metrics">
+                            <div class="metric-box">
+                                <h4>Tiempo promedio</h4>
+                                <p>3 min 28 s</p>
+                            </div>
+                            <div class="metric-box">
+                                <h4>Éxito global</h4>
+                                <p>98%</p>
+                            </div>
+                            <div class="metric-box">
+                                <h4>Errores hoy</h4>
+                                <p>0.7%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- BLOQUE INFERIOR -->
+            <section class="dashboard-section monitor-bottom-grid">
+
+                <div class="card activity-card">
+                    <div class="panel-header">
+                        <h2>Procesamiento por hora</h2>
+                        <span>Jornada actual</span>
+                    </div>
+
+                    <div class="activity-bars">
+                        <div class="activity-row">
+                            <span>08:00</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 35%;"></div>
+                            </div>
+                            <strong>95</strong>
+                        </div>
+
+                        <div class="activity-row">
+                            <span>09:00</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 60%;"></div>
+                            </div>
+                            <strong>160</strong>
+                        </div>
+
+                        <div class="activity-row">
+                            <span>10:00</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 82%;"></div>
+                            </div>
+                            <strong>220</strong>
+                        </div>
+
+                        <div class="activity-row">
+                            <span>11:00</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 74%;"></div>
+                            </div>
+                            <strong>198</strong>
+                        </div>
+
+                        <div class="activity-row">
+                            <span>12:00</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 48%;"></div>
+                            </div>
+                            <strong>130</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card activity-card">
+                    <div class="panel-header">
+                        <h2>Observaciones del sistema</h2>
+                        <span>Resumen</span>
+                    </div>
+
+                    <div class="summary-list">
+                        <div class="summary-item">
+                            <h4>Mayor carga actual</h4>
+                            <p>Facturación y contratos masivos.</p>
+                        </div>
+
+                        <div class="summary-item">
+                            <h4>Principal cuello de botella</h4>
+                            <p>Validación de campos vacíos en archivos Excel.</p>
+                        </div>
+
+                        <div class="summary-item">
+                            <h4>Acción sugerida</h4>
+                            <p>Priorizar revisión de lotes con errores antes de exportar.</p>
+                        </div>
+
+                        <div class="summary-item">
+                            <h4>Estado general del día</h4>
+                            <p>Operación estable con alertas menores.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
